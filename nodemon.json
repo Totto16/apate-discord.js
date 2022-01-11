@@ -1,0 +1,6 @@
+{
+    "watch": ["active"],
+    "ext": ".js",
+    "ignore": [],
+    "exec": "npm run build && npm run start"
+  }

@@ -1,0 +1,51 @@
+{
+  "name": "apate-discord.js",
+  "version": "1.0.0-alpha",
+  "description": "server side decryption and encryption for cleints using the 'Apate' BetterDiscord Plugin",
+  "main": "build/index.js",
+  "scripts": {
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm audit fix",
+    "ts:compile": "npx tsc",
+    "build": "npm run prettier && tsc",
+    "start:dev": "nodemon",
+    "start": "node ./test.js",
+    "update": "npm-check -u --skip-unused && npm dedupe",
+    "lint": "eslint '*/**/*.{js,ts}' --cache --quiet --color --fix",
+    "lint:debug": "eslint '*/**/*.{js,ts}' --debug --color --fix",
+    "precommit-msg": "echo 'Pre-commit checks...\n' && exit 0",
+    "prettier:debug": "npx prettier --check .",
+    "prettier": "npx prettier --write ."
+  },
+  "keywords": [
+    "Apate",
+    "Discord.js"
+  ],
+  "pre-commit": [
+    "precommit-msg",
+    "prettier"
+  ],
+  "author": "Totto",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/stegcloak": "^1.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "eslint": "^8.6.0",
+    "eslint-plugin-no-secrets": "^0.8.9",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-optimize-regex": "^1.2.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-this": "^0.2.3",
+    "npm-check": "^5.9.2",
+    "typescript": "^4.5.4",
+    "typestub-cryptico": "^0.2.3"
+  },
+  "dependencies": {
+    "cryptico": "^1.0.2",
+    "discord.js": "^13.5.1",
+    "log4js": "^6.3.0",
+    "stegcloak": "^1.1.1"
+  },
+  "type": "module",
+  "exports": "./active/index.js"
+}
