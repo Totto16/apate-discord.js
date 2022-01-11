@@ -85,7 +85,7 @@ function extractMessage(message: string, options: PluginOptions): DecryptedMessa
     let usedPassword = '';
     const hiddenMessage: string | null = (() => {
         try {
-            const stegCloak: StegCloak = new StegCloak(false, false); // I think its fdalöse, cause in the originmal its using implizitely undefined
+            const stegCloak: StegCloak = new StegCloak(false, false); // I think its false, cause in the original its using implicitely undefined
             let revealedMessage: string;
             revealedMessage = stegCloak.reveal(
                 message,
