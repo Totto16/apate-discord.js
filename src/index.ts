@@ -30,7 +30,7 @@ function log(level: LogLevel, ...messages: unknown[]) {
 
 async function main(options: PluginOptions): Promise<ModifiedClient | null> {
     return new Promise((resolve) => {
-        //TODO: update required intents!!
+        //TODO(#1): update required intents!!
         const client: Client | null = new Client({
             partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
             allowedMentions: { parse: ['users', 'roles'], repliedUser: true },
